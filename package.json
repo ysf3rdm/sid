@@ -1,12 +1,12 @@
 {
-  "name": "@ensdomains/ens",
-  "version": "0.5.0",
+  "name": "@siddomains/sid",
+  "version": "0.1.1",
   "description": "Implementations for registrars and local resolvers for the Ethereum Name Service",
   "scripts": {
     "test": "truffle test",
     "lint": "solium --dir ./contracts",
     "prepublishOnly": "truffle compile && truffle networks --clean",
-    "pub": "npm run prepublishOnly && npm publish"
+    "pub": "npm run prepublishOnly && yarn publish --access public"
   },
   "main": "index.js",
   "repository": {
@@ -29,7 +29,7 @@
     "@ensdomains/test-utils": "1.3.0",
     "solidity-coverage": "^0.3.5",
     "solium": "^1.0.4",
-    "web3-utils": "^1.3.0",
-    "truffle": "^5.1.62"
+    "truffle": "^5.1.62",
+    "web3-utils": "^1.3.0"
   }
 }
