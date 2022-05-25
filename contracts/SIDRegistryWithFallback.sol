@@ -1,19 +1,19 @@
-pragma solidity ^0.7.0;
+pragma solidity >=0.7.4;
 
-import "./ENS.sol";
-import "./ENSRegistry.sol";
+import "./SID.sol";
+import "./SIDRegistry.sol";
 
 /**
- * The ENS registry contract.
+ * The SID registry contract.
  */
-contract ENSRegistryWithFallback is ENSRegistry {
+contract ENSRegistryWithFallback is SIDRegistry {
 
-    ENS public old;
+    SID public old;
 
     /**
-     * @dev Constructs a new ENS registrar.
+     * @dev Constructs a new SID registrar.
      */
-    constructor(ENS _old) public ENSRegistry() {
+    constructor(SID _old) public SIDRegistry() {
         old = _old;
     }
 

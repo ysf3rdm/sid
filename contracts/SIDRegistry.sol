@@ -1,11 +1,11 @@
-pragma solidity ^0.7.0;
+pragma solidity >=0.7.4;
 
-import "./ENS.sol";
+import "./SID.sol";
 
 /**
- * The ENS registry contract.
+ * The SID registry contract.
  */
-contract ENSRegistry is ENS {
+contract SIDRegistry is SID {
 
     struct Record {
         address owner;
@@ -24,7 +24,7 @@ contract ENSRegistry is ENS {
     }
 
     /**
-     * @dev Constructs a new ENS registrar.
+     * @dev Constructs a new ENS registry.
      */
     constructor() public {
         records[0x0].owner = msg.sender;
