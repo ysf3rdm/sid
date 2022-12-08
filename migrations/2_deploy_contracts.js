@@ -16,7 +16,7 @@ const namehash = require("eth-ens-namehash");
 function getRootNodeFromTLD(tld) {
   return {
     namehash: namehash.hash(tld),
-    sha3: web3.sha3(tld),
+    sha3: web3.utils.sha3(tld),
   };
 }
 
@@ -47,7 +47,5 @@ function deployFIFSRegistrar(deployer, tld) {
 module.exports = function (deployer, network) {
   var tld = "bau";
 
-  if (network === "dev.fifs") {
-    deployFIFSRegistrar(deployer, tld);
-  }
+  deployFIFSRegistrar(deployer, tld);
 };
