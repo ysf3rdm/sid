@@ -41,12 +41,16 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  plugins: ["truffle-plugin-verify"],
+  api_keys: {
+    bscscan: "RH45AWA3JFSFZVRT3HB52PYZFV9NJ8RS57",
+  },
 
   networks: {
     binanceTestnet: {
       provider: () => provider,
       network_id: "97",
-      gas: 1000000000,
+      gas: 25e6,
     },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
